@@ -25,3 +25,7 @@ ReactDOM.render(
   </Provider>,
   document.getElementById("root")
 );
+<link
+  rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css"
+></link>;
