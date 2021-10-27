@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import {
   CCreateElement,
@@ -24,14 +25,21 @@ const TheSidebar = () => {
     <CSidebar>
       <CSidebarBrand className="d-mddown-none m-r-2" to="/">
         {" "}
-        React Bug Tracker
+        <p class="sidebar-header">React Bug Tracker</p>
       </CSidebarBrand>
-      <CSidebarNav className="d-flex align-items-center">
-        <CSidebarNavItem className="nav-item"> Hello</CSidebarNavItem>
-        <CSidebarNavItem className="nav-item">Hello</CSidebarNavItem>
+
+      <CSidebarNav>
+        <Link to="/dashboard" className="nav-link">
+          Dashboard
+        </Link>
+        <Link to="/viewbugs" className="nav-link">
+          View Bugs
+        </Link>
         {/* This option is only showed if the user is an admin. */}
         {auth.admin && (
-          <CSidebarNavItem className="nav-item">Hello</CSidebarNavItem>
+          <Link to="/createbug" className="nav-link">
+            Create New Bug
+          </Link>
         )}
       </CSidebarNav>
     </CSidebar>

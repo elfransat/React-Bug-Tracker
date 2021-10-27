@@ -3,17 +3,17 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import { Provider } from "react-redux";
-import { configureStore, combineReducers } from "@reduxjs/toolkit";
+import { configureStore, combineReducers, } from "@reduxjs/toolkit";
 
 // reducers
-import authReducer from "./Controllers/Redux/authSlice";
-import bugReducer from "./Controllers/Redux/bugSlice";
-import userReducer from "./Controllers/Redux/userSlice";
+import authReducer from "./Features/Authentication/authSlice";
+import bugReducer from "./Features/Bugs/bugSlice";
+import userReducer from "./Features/User/userSlice";
 
-//redux condigure
+//redux configure
 const reducer = combineReducers({
   auth: authReducer,
-  bug: bugReducer,
+  bugs: bugReducer,
   user: userReducer,
 });
 

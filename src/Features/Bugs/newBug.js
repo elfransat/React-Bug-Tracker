@@ -7,11 +7,10 @@ function bug(bug) {
     this.name = bug.name;
     this.details = bug.details;
     this.steps = bug.steps;
-    this.dateAssigned = bug.assigned;
-    this.priority = bug.priority;
     this.version = bug.version;
     this.personAssigned = bug.personAssigned;
     this.creator = bug.creator;
+    this.priority = bug.priority;
     this.dueDate = bug.dueDate;
     this.timeAssigned = bug.timeAssigned;
   }

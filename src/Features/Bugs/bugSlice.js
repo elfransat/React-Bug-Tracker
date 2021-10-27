@@ -1,16 +1,18 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { retrieveBugs } from "../bugController";
+import { retrieveBugs } from "./bugTest";
+import { retrieveSpecificBug } from "./retrieveSpecificBug";
 
 const slice = createSlice({
   name: "bug",
   initialState: [],
   reducers: {
     getBugs: (state) => retrieveBugs(),
-    addBug: (state, actions) => {},
+    getSpecificBug: (state) => retrieveSpecificBug(),
+    createBugs: (state, actions) => {},
     updateBug: (state, actions) => {},
     markComplete: (state, action) => {},
   },
 });
 
 export default slice.reducer;
-export const { getBugs, addBug, updateBug, markComplete } = slice.actions;
+export const { getBugs, createBugs, updateBug, markComplete } = slice.actions;

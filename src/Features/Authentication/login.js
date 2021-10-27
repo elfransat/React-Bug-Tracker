@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { signIn } from "../../Controllers/Redux/authSlice";
+import { signIn } from "./authSlice";
 import { Button, Card, Form, Container, Row, Col } from "react-bootstrap";
 import "./login.css";
 import background from "../../images/background.jpeg";
@@ -23,7 +23,7 @@ export default () => {
   }
 
   return (
-    <body style={{ backgroundImage: `url(${background})` }}>
+    <div style={{ backgroundImage: `url(${background})` }}>
       <Container className="d-flex align-items-center justify-content-center min-vh-100">
         <Card style={{ width: "30rem" }}>
           <Col className="pt-5 pr-5 pl-5 pb-3 text-center" sm={12}>
@@ -68,7 +68,7 @@ export default () => {
           </Col>
         </Card>
       </Container>
-    </body>
+    </div>
     /*
     <div className="login-background">
       <form action="" class="login-panel">

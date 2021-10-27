@@ -1,5 +1,79 @@
-// Here you can add other styles
+// navigation bar
 
-.nav-item {
-  font-size: 16px;
+.nav-link {
+  display: flex;
+  color: white;
+  flex-direction: row;
+  justify-content: center;
 }
+
+// sidebar
+.sidebar-header {
+  font-size: 24px;
+  margin-top: 1rem;
+}
+
+.nav-link:hover {
+  background-color: blue;
+  color: white;
+}
+
+// bug card
+.bug-container {
+  margin-top: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  grid-column: 2;
+}
+
+
+.bug-card {
+  background-color: red;
+  color: white;
+  margin: 10px;
+  padding: 40px;
+  flex-wrap: wrap;
+  text-align: center;
+  min-width: 350px;
+  min-height: 200px;
+  max-width: 350px;
+}
+
+// bug view page CSS 
+
+.view-section {
+  min-width: 40%;
+  text-align: center;
+  background-color: white;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+
+
+  h2 {
+    margin: 0 0 15px 0;
+    border-bottom: 1px groove black;
+  }
+}
+
+// ensures navbar stays as intended 
+.nav-bar {
+  position: sticky;
+}
+
+html,
+body,
+#app,
+#app > div {
+  height: 100%;
+}
+// ensures no overlap of sidebar and nav bar
+main {
+  padding-top: 104px;
+  margin-left: 256px;
+}
+
+
+
